@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Cajero automatico</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Cajero</title>
+    <style>*{margin:0;padding:0;}span{color:green}</style>
   </head>
   <body>
-    <img src="cajero.gif" />
+    <!-- <img src="cajero.gif"/> -->
     <div>
-      <input type="number" id="dinero" />
+      <input type="number" id="dinero" placeholder="Cuanto quieres extraer?"/>
       <input type="button" value="Extraer" id="extraer" />
     </div>
     <div>
-    
+      <h5>DINERO QUE VAS A EXTRAER</h5>
       <p><span id="diez">       </span> billetes de diez</p>
       <p><span id="veinte">     </span> billetes de veinte</p>
       <p><span id="cincuenta">  </span> billetes de cincuenta</p>
@@ -19,7 +22,12 @@
       <p><span id="dosientos">  </span> billetes de dosientos</p>
       <p><span id="quinientos"> </span> billetes de quinientos</p>
       <p><span id="mil">        </span> billetes de mil</p>
-    
+    </div>
     <script src="cajero.js"></script>
+    <div>
+      <h5>DINERO QUE HAY EN LA CAJA</h5>
+      <span id='dineroEnCaja'></span>
+      <input type="button" value="dinero en caja" onclick="imprimirDineroEnCaja()" id="extraer" />
+    </div>
   </body>
 </html>
